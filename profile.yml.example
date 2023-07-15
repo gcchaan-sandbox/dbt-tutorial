@@ -8,7 +8,7 @@ jaffle_shop:
       port: 5432
       user: postgres
       pass: postgres
-      dbname: sample_db
+      dbname: raw
       schema: public
 
     prod:
