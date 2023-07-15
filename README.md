@@ -22,6 +22,14 @@ dbtのチュートリアル[Quickstart for dbt Core from a manual install](https
 1. dbt docs generate
 1. dbt docs serve
 
+
+### Lint
+
+```
+find jaffle_shop/models -name '*.sql' -type f | xargs -I {} sqlfluff lint {} --dialect postgres
+```
+
+
 ### Operation command
 
 ```

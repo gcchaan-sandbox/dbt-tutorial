@@ -3,4 +3,5 @@ select
     first_name,
     last_name
 
-from jaffle_shop.customers
+from
+    jaffle_shop.customers

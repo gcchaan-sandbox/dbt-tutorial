@@ -1,0 +1,2 @@
+dbt-postgres==1.5.2
+sqlfluff==2.1.2

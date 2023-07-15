@@ -1,0 +1,16 @@
+name: SQLFluff
+
+on: [pull_request]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11.3'
+      - name: install sqlfluff
+        run: pip install -r requirements.txt
+      - name: run sqlfluff
+        run: find jaffle_shop/models -name '*.sql' -type f | xargs -I {} sqlfluff lint {} --dialect postgres
